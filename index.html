@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Consumption Chart</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Water Consumption Tracker</h1>
+        <form id="dataForm">
+            <h2>Please Enter Date & Water Consumption to see the chart</h2>
+            <label for="dateInput">Date:</label>
+            <input type="date" id="dateInput" required>
+            <label for="consumptionInput">Water Consumption (liters):</label>
+            <input type="number" id="consumptionInput" required>
+            <button type="submit">Add Data</button>
+        </form>
+        
+        <table id="dataTable">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Water Consumption (liters)</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+        <canvas id="waterConsumptionChart"></canvas>
+        <div class="chart-buttons">
+            <button id="lineChartButton">Line Chart</button>
+            <button id="barChartButton">Bar Chart</button>
+            <button id="columnChartButton">Column Chart</button>
+            <button id="comparisonChartButton">Comparison Chart</button>
+        </div>
+        <button id="exportChartButton">Export Chart to PDF</button>
+        <button id="exportTableButton">Export Table to CSV</button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
